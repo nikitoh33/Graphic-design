@@ -1,0 +1,207 @@
+.about-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 0 60px;
+}
+
+.about-grid-main {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.about-intro-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-manifesto-card {
+  position: relative;
+  background: linear-gradient(145deg, #13141f 0%, #0d0e15 100%);
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-radius: 24px;
+  padding: 36px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.manifesto-badge {
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  color: var(--accent-primary, #c4b5fd);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.manifesto-quote {
+  font-family: var(--font-display, 'Syne', sans-serif);
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.manifesto-author {
+  font-size: 13px;
+  color: var(--text-muted, #64748b);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.author-line {
+  width: 24px;
+  height: 1px;
+  background: var(--accent-primary, #c4b5fd);
+}
+
+.about-heading {
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 800;
+  color: #f8fafc;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.about-heading span {
+  color: var(--accent-primary, #c4b5fd);
+}
+
+.about-text-lead {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #e2e8f0;
+}
+
+.about-text-secondary {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-secondary, #94a3b8);
+}
+
+/* Grilla de servicios / especialidades */
+.services-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.services-title {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 800;
+  color: #f8fafc;
+  letter-spacing: -0.02em;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.service-card {
+  position: relative;
+  background: #111218;
+  border: 1px solid var(--border-subtle, rgba(255, 255, 255, 0.08));
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(196, 181, 253, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.service-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-num {
+  font-family: var(--font-mono, monospace);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-primary, #c4b5fd);
+}
+
+.service-card-title {
+  font-family: var(--font-display, 'Syne', sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.25;
+}
+
+.service-card-sub {
+  font-size: 12px;
+  color: var(--accent-secondary, #fbcfe8);
+  font-weight: 500;
+}
+
+.service-card-desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-secondary, #94a3b8);
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.service-tag {
+  font-family: var(--font-mono, monospace);
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Regla estricta móvil: Cuadrícula compacta de 2 columnas (repeat(2, 1fr)) */
+@media (max-width: 900px) {
+  .about-grid-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .service-card {
+    padding: 16px 14px;
+    border-radius: 14px;
+    gap: 10px;
+  }
+
+  .service-card-title {
+    font-size: 15px;
+  }
+
+  .service-card-desc {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .service-tag {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+}

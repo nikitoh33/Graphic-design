@@ -1,0 +1,107 @@
+.projects-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 0 60px;
+}
+
+.projects-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  max-width: 720px;
+  margin: 0 auto 36px;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-primary, #c4b5fd);
+  background: rgba(196, 181, 253, 0.08);
+  border: 1px solid rgba(196, 181, 253, 0.22);
+  padding: 4px 14px;
+  border-radius: 999px;
+}
+
+.projects-title {
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 800;
+  color: #f8fafc;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+.projects-desc {
+  font-size: 15px;
+  color: var(--text-secondary, #94a3b8);
+  line-height: 1.6;
+}
+
+/* Filtros de categoría interactivos con estilo pastel */
+.category-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.filter-btn {
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-secondary, #94a3b8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+}
+
+.filter-btn.active {
+  background: var(--accent-primary, #c4b5fd);
+  color: #090a0f;
+  font-weight: 700;
+  border-color: var(--accent-primary, #c4b5fd);
+  box-shadow: 0 0 20px rgba(196, 181, 253, 0.3);
+}
+
+.projects-chroma-wrap {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.projects-hint {
+  text-align: center;
+  margin-top: 24px;
+  font-family: var(--font-mono, monospace);
+  font-size: 12px;
+  color: var(--text-muted, #64748b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 50px 0 40px;
+  }
+
+  .filter-btn {
+    padding: 6px 14px;
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,146 @@
+:root {
+  /* Color Palette - Aesthetic Pastel Luxury & Warm Dark Studio */
+  --bg-canvas: #090a0f;
+  --bg-surface: #12131b;
+  --bg-surface-elevated: #181a24;
+  --bg-surface-glass: rgba(18, 19, 27, 0.8);
+
+  /* Colores Pastel Elegantes */
+  --accent-primary: #c4b5fd;     /* Pastel Lilac / Lavanda */
+  --accent-secondary: #fbcfe8;   /* Pastel Rosé / Peonía */
+  --accent-peach: #fed7aa;       /* Pastel Durazno Cálido */
+  --accent-sky: #bae6fd;         /* Pastel Cielo Suave */
+  --accent-mint: #a7f3d0;        /* Pastel Menta / Salvia */
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-accent: rgba(196, 181, 253, 0.35);
+
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 12px 40px rgba(0, 0, 0, 0.6);
+  --shadow-glow-pastel: 0 0 35px rgba(196, 181, 253, 0.2);
+
+  /* Typography System */
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Layout Constants */
+  --container-max-width: 1240px;
+  --section-padding-y: 100px;
+  --section-padding-y-mobile: 60px;
+}
+
+/* Normalización mobile y eliminación obligatoria de destellos táctiles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus,
+a:focus,
+div:focus {
+  outline: none;
+}
+
+/* Control estricto de scroll horizontal */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selección de texto personalizada en suave lavanda pastel */
+::selection {
+  background-color: var(--accent-primary);
+  color: #090a0f;
+}
+
+::-moz-selection {
+  background-color: var(--accent-primary);
+  color: #090a0f;
+}
+
+/* Scrollbar estilizada */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #242633;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #383b4e;
+}
+
+/* Elementos interactivos base */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Tipografías base */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+/* Clases utilitarias de layout */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
